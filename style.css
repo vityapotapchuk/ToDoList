@@ -27,7 +27,7 @@ input {
 }
 
 .input:focus {
-    background-color: bisque;
+    
 }
 
 .js-btn {
@@ -49,5 +49,13 @@ input {
     color: aliceblue;
     font-size: 70px;
     margin-bottom: 15px;
+ }
+
+ .todoDiv {
+    width: 380px;
+    background-color: aliceblue;
+    border: none;
+    border-top-left-radius: 17px;
+    border-bottom-left-radius: 17px;
  }
 
