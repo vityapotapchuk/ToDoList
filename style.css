@@ -23,7 +23,7 @@ input {
     border-bottom-left-radius: 17px;
     border-top-left-radius: 17px;
     border: none;
-    width: 300px;
+    width: 250px;
     cursor: pointer;
     outline: none;
     font-family: "Montserrat", sans-serif;
@@ -50,13 +50,13 @@ input {
 }
  h1 {
     color: aliceblue;
-    font-size: 70px;
+    font-size: 3em;
     margin-bottom: 15px;
     font-style: italic;
  }
 
  .todo{
-    width: 375px;
+    width: 330px;
     background-color: rgb(84, 84, 83); 
     border-radius: 17px;
     padding: 15px;
