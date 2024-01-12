@@ -1,8 +1,10 @@
 body {
-    font-family: sans-serif;
     background-color: rgb(7, 45, 53);
-   
-
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: italic;
+    
 }
 
 .container  {
@@ -13,6 +15,7 @@ body {
     flex-direction: column;
     margin-top: 30vh;
     /* border: 1px solid white; */
+    
 }
 
 input {
@@ -22,13 +25,9 @@ input {
     border-top-left-radius: 17px;
     border: none;
     width: 300px;
-    cursor: pointer;
     outline: none;
 }
 
-.input:focus {
-    
-}
 
 .js-btn {
     padding: 10px;
@@ -39,25 +38,32 @@ input {
     width: 80px;
     background-color: rgb(51, 51, 52);
     color: aliceblue;
-    cursor: pointer;
+    outline: none;
+    
+}
+
+.js-btn:hover {
+    background-color: rgb(29, 29, 29);
+    transition-duration: 0.5s;
 }
 
 .form {
     display: flex;
     flex-direction: row;
 }
+
  h1 {
-    color: aliceblue;
+    color: rgba(240, 248, 255, 0.644);
     font-size: 70px;
     margin-bottom: 15px;
  }
 
  .todo {
-    width: 380px;
+    width: 390px;
     background-color: rgb(84, 84, 84);
     border: none;
     border-radius: 17px;
-    padding: 12px;
+    padding: 5px;
     margin: 10px;
     display: flex;
     justify-content: space-between;
@@ -68,7 +74,68 @@ input {
  .todo-item{
     color: aliceblue;
     flex: 1;
+    font-weight: 400;
+    font-style: normal;
+    list-style-type: none;
+    margin: 0 10px;
+    font-size: 12px;
+
+ }
+
+ .todoList {
+    overflow: scroll;
+    max-height: 200px;
+    overflow-x: hidden;
 
 
  }
+
+ .checked-btn  {
+    padding: 15px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 80%;
+    font-size: 10px;
+    height: 2em;
+    width: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+ }
+ .deleted-btn {
+    padding: 15px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 80%;
+    font-size: 10px;
+    height: 2em;
+    width: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+ }
+
+ ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 2px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgba(200, 200, 200, 0.174); 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #8c8c8c; 
+  }
 
