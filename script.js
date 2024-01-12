@@ -7,6 +7,7 @@ const toDoList = document.querySelector('.todoList');
 //События
 
 btnNode.addEventListener('click', addToDo);
+document.addEventListener("DOMContentLoaded", getTodos);
 
 //Добавим новый item в список 
 
@@ -33,22 +34,17 @@ function addToDo(event) {
 
         //Add checked button
         const checked = document.createElement('button');
-        checked.innerHTML = '<i class="check"></i>';
+        checked.innerHTML = '<i class="check">+</i>';
         checked.classList.add('checked-btn');
         todoDiv.appendChild(checked);
 
         //Add delete button
         const deleted = document.createElement('button');
-        deleted.innerHTML = '<i class="trash"></i>';
-        deleted.classList.add('checked-btn');
+        deleted.innerHTML = '<i class="trash">-</i>';
+        deleted.classList.add('deleted-btn');
         todoDiv.appendChild(deleted);
 
+        
     }
    
-
-    
-
-    
-
-}
-    
+};
