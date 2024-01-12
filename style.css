@@ -15,6 +15,7 @@ body {
     flex-direction: column;
     margin-top: 30vh;
     /* border: 1px solid white; */
+    
 }
 
 input {
@@ -58,8 +59,8 @@ input {
  }
 
  .todo{
-    width: 245px;
-    background-color: rgb(84, 84, 83); 
+    width: 165px;
+    background-color: rgba(4, 25, 31, 0.222); 
     border-radius: 17px;
     padding: 15px;
     margin: 10px;
@@ -75,5 +76,37 @@ input {
     font-weight: 400;
     font-style: normal;
  }
+
+ .todoList {
+    overflow-y: scroll;
+    height: 270px;
+
+    
+ }
+
+ ::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgba(128, 128, 128, 0.235); 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgba(116, 116, 116, 0.264); 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(116, 116, 116, 0.541); ; 
+  }
+
+ 
+  
+ 
 
 
