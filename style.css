@@ -19,8 +19,8 @@ body {
 
 input {
     padding: 12px;
-    margin: 10px auto;
-    border-bottom-left-radius: 17px;
+    margin: 0px auto;
+    border-top-right-radius: 17px;
     border-top-left-radius: 17px;
     border: none;
     width: 170px;
@@ -33,20 +33,22 @@ input {
 
 
 .js-btn {
-    padding: 10px;
-    margin: 10px auto;
+    /* padding: 10px; */
+    margin: 0px auto;
     border-bottom-right-radius: 17px;
-    border-top-right-radius: 17px;
+    border-bottom-left-radius: 17px;
     border: none;
-    width: 80px;
+    width: 194px;
     background-color: rgb(51, 51, 52);
     color: aliceblue;
     cursor: pointer;
+    height: 40px;
 }
 
 .form {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    margin: 0;
 }
  h1 {
     color: aliceblue;
