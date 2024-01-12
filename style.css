@@ -23,7 +23,7 @@ input {
     border-bottom-left-radius: 17px;
     border-top-left-radius: 17px;
     border: none;
-    width: 250px;
+    width: 170px;
     cursor: pointer;
     outline: none;
     font-family: "Montserrat", sans-serif;
@@ -56,7 +56,7 @@ input {
  }
 
  .todo{
-    width: 330px;
+    width: 245px;
     background-color: rgb(84, 84, 83); 
     border-radius: 17px;
     padding: 15px;
@@ -66,6 +66,7 @@ input {
     color: white; 
     
  }
+
 
  .item {
     font-size: 13px;
