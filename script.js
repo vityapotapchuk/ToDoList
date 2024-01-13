@@ -18,13 +18,18 @@ function addToDo (event) {
 
     if (inputNode.value === '') {
         alert("Write some text!")
+
     } else {
         newItem.classList.add('item');
         todoDiv.appendChild(newItem);
         newItem.innerText = inputNode.value;
+
+        
         todoDiv.addEventListener('click', () => {
-            newItem.style.textDecoration = 'line-through';
+        newItem.style.textDecoration = 'line-through';
         })
+
+        //Remove item
         todoDiv.addEventListener('dblclick', () => {
             todoList.removeChild(todoDiv);
         })
