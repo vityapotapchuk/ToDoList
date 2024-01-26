@@ -3,26 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>"Shoping List"</title>
+    <title>ToDo List</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <div class="container">
-        <h1>Shoping List</h1>
-
-        <div class="form">
-            <input type="text" class="js-input" placeholder="Add new item...">
-            <button class="js-btn">Add new</button>
+        <div class="todo-app">
+            <h2>ToDo List</h2>
+            <div class="row">
+                <input type="text" placeholder="Add new item">
+                <button>Add</button>
+            </div>
+            <ul class="list-container">
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </ul>
         </div>
-        <div class="todoList"></div>
-
-    <div class="js-output"></div>
     </div>
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
