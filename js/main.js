@@ -64,6 +64,17 @@ function addTask (event) {
 function deleteTask(event) {
     if (event.target.dataset.action === 'delete') {
         const parentNode = event.target.closest('.list-group-item')
+
+        //Find index for delete from massive
+        const id = Number(parentNode.id);
+        const index = tasks.findIndex(function(task) {
+            if (task.id === id) {
+                return true
+            }
+        })
+    
+        //Delete task from massive
+        tasks.splice(index, 1)
         parentNode.remove()
     }
 
