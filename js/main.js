@@ -4,6 +4,8 @@ const taskInput = document.querySelector('#taskInput')
 const tasksList = document.querySelector('#tasksList')
 const emptyList = document.querySelector('#emptyList')
 
+let tasks = [];
+
 //Add task to list
 form.addEventListener('submit', addTask) 
 
@@ -11,9 +13,6 @@ form.addEventListener('submit', addTask)
 tasksList.addEventListener('click', deleteTask)
 tasksList.addEventListener('click', doneTask)
 
-if (localStorage.getItem('localData')) {
-    tasksList.innerHTML = localStorage.getItem('localData')
-}
 
 //Functions
 function addTask (event) {
@@ -22,11 +21,23 @@ function addTask (event) {
 
        //Find task text from input
        let taskText = taskInput.value;
+
+       //Create task parameters
+       const newTask =  {
+            id: Date.now(),
+            name: taskText,
+            done: false, 
+       }
+       //Add new task to massive fo tasks
+       tasks.push(newTask)
        
+       const cssClass = newTask.done ? 'task-title task-title--done' : 'task-title';
+      
+
        //Add task HTML to task container
        const taskHTML = `
-           <li class="list-group-item d-flex justify-content-between task-item">
-               <span class="task-title">${taskText}</span>
+           <li id="${newTask.id}" class="list-group-item d-flex justify-content-between task-item">
+               <span class="${cssClass}">${newTask.name}</span>
                <div class="task-item__buttons">
                    <button type="button" data-action="done" class="btn-action">
                        <img src="./img/tick.svg" alt="Done" width="18" height="18">
@@ -48,8 +59,6 @@ function addTask (event) {
        if (emptyList.children.length > 1) {
            emptyList.classList.add('none')
        }
-
-       addHTMLtoLS()
 }
 
 function deleteTask(event) {
@@ -61,8 +70,6 @@ function deleteTask(event) {
     if (tasksList.children.length === 1) {
         emptyList.classList.remove('none')
     }
-
-    addHTMLtoLS()
 }
 
 function doneTask (event) {
@@ -73,10 +80,4 @@ function doneTask (event) {
        
 
     }
-
-    addHTMLtoLS()
-}
-
-function addHTMLtoLS() {
-    localStorage.setItem('localData', tasksList.innerHTML)
 }
